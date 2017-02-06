@@ -144,7 +144,9 @@ testConcreteFactory($bookFactoryInstance);
 writeln("END TESTING ABSTRACT FACTORY PATTERN");
 writeln('');
 
-
+/**
+ * @param OReillyBookFactory|SamsBookFactory $bookFactoryInstance
+ */
 function testConcreteFactory($bookFactoryInstance)
 {
     $phpBookOne = $bookFactoryInstance->makePHPBook();
