@@ -63,6 +63,9 @@ class HTMLPageBuilder extends AbstractPageBuilder {
 }
 
 class HTMLPageDirector extends AbstractPageDirector {
+	/**
+	 * @var AbstractPageBuilder|HTMLPageBuilder|null
+	 */
 	private $builder = NULL;
 	public function __construct(AbstractPageBuilder $builder_in) {
 		$this->builder = $builder_in;
@@ -86,7 +89,7 @@ writeln('');
 $pageBuilder = new HTMLPageBuilder();
 $pageDirector = new HTMLPageDirector($pageBuilder);
 $pageDirector->buildPage();
-$page = $pageDirector->GetPage();
+$page = $pageDirector->getPage();
 writeln($page->showPage());
 writeln('');
 
