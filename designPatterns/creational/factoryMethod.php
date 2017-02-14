@@ -121,6 +121,9 @@ writeln('');
 writeln('END TESTING FACTORY METHOD PATTERN');
 writeln('');
 
+/**
+ * @param SamsFactoryMethod|OReillyFactoryMethod $factoryMethodInstance
+ */
 function testFactoryMethod($factoryMethodInstance) {
 	$phpUs = $factoryMethodInstance->makePHPBook("us");
 	writeln('us php Author: '.$phpUs->getAuthor());
