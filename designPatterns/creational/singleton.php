@@ -38,6 +38,9 @@ class BookSingleton {
 }
 
 class BookBorrower {
+	/**
+	 * @var BookSingleton
+	 */
 	private $borrowedBook;
 	private $haveBook = FALSE;
 
