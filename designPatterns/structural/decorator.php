@@ -79,7 +79,7 @@ writeln($decorator->showTitle());
 writeln('');
 
 writeln('showing title after reset: ');
-writeln($decorator->resetTitle());
+$decorator->resetTitle();
 writeln($decorator->showTitle());
 writeln('');
 
