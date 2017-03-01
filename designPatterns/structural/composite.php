@@ -60,11 +60,16 @@ class SeveralBooks extends OnTheBookShelf {
 		$this->oneBooks[$this->getBookCount()] = $oneBook;
 		return $this->getBookCount();
 	}
+
+	/**
+	 * @param OneBook $oneBook
+	 *
+	 * @return mixed
+	 */
 	public function removeBook($oneBook) {
 		$counter = 0;
 		while (++$counter <= $this->getBookCount()) {
-			if ($oneBook->getBookInfo(1) ==
-			    $this->oneBooks[$counter]->getBookInfo(1)) {
+			if ($oneBook->getBookInfo(1) == $this->oneBooks[$counter]->getBookInfo(1)) {
 				for ($x = $counter; $x < $this->getBookCount(); $x++) {
 					$this->oneBooks[$x] = $this->oneBooks[$x + 1];
 				}
