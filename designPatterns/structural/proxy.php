@@ -8,32 +8,44 @@ class ProxyBookList {
 	//bookList is not instantiated at construct time
 	function __construct() {
 	}
+	
 	function getBookCount() {
 		if (NULL == $this->bookList) {
 			$this->makeBookList();
 		}
+		writeln('get book count');
 		return $this->bookList->getBookCount();
 	}
+	
 	function addBook($book) {
 		if (NULL == $this->bookList) {
 			$this->makeBookList();
 		}
+		
+		writeln('add book');
 		return $this->bookList->addBook($book);
 	}
+	
 	function getBook($bookNum) {
 		if (NULL == $this->bookList) {
 			$this->makeBookList();
 		}
+
+		writeln('get book');
 		return $this->bookList->getBook($bookNum);
 	}
+	
 	function removeBook($book) {
 		if (NULL == $this->bookList) {
 			$this->makeBookList();
 		}
+
+		writeln('remove book');
 		return $this->bookList->removeBook($book);
 	}
+	
 	//Create 
-	function makeBookList() {
+	private function makeBookList() {
 		$this->bookList = new bookList();
 	}
 }
