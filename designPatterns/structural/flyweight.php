@@ -53,8 +53,12 @@ class FlyweightBookShelf {
 		$this->books[] = $book;
 	}
 	function showBooks() {
-		$return_string = NULL;
+		$return_string = '';
 		foreach ($this->books as $book) {
+			if ($return_string != '') {
+				$return_string .= '<br/>';
+			}
+			
 			$return_string .= 'title: "'.$book->getAuthor().'  author: '.$book->getTitle();
         };
         return $return_string;
